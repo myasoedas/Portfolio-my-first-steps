@@ -22,3 +22,11 @@ div {
   width: 636px;
   margin: auto;
 }
+
+.project_music-album {
+  background-image: url(https://code.s3.yandex.net/web-code/album.png);
+}
+
+.project_design-principles {
+  background-image: url(https://code.s3.yandex.net/web-code/design.png);
+}
