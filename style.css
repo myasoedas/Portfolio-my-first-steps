@@ -1,4 +1,6 @@
+.div {
+  border: 1px solid red;
+}
 .header {
   height: 95px;
-  background: rebeccapurple;
 }
