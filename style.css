@@ -11,6 +11,10 @@ div {
   margin: auto;
 }
 
+.flex-row {
+  display: flex;
+}
+
 .project {
   display: flex;
   background-position: center;
