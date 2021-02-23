@@ -3,10 +3,22 @@ div {
 }
 
 .header {
-  height: 95px;
   display: flex;
+  height: 95px;
 }
 
 .header-link {
+  margin: auto;
+}
+
+.project {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+}
+
+.project_beginner {
+  height: 430px;
+  width: 636px;
   margin: auto;
 }
