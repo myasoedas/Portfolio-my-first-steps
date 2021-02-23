@@ -1,6 +1,12 @@
-.div {
+div {
   border: 1px solid red;
 }
+
 .header {
   height: 95px;
+  display: flex;
+}
+
+.header-link {
+  margin: auto;
 }
