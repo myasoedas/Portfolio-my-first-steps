@@ -13,6 +13,7 @@ div {
 
 .flex-row {
   display: flex;
+  justify-content: space-around;
 }
 
 .project {
@@ -43,6 +44,7 @@ div {
   display: flex;
   width: 636px;
   height: 557px;
+  justify-content:space-between;
 }
 
 .flex-column_reversed {
