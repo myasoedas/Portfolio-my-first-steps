@@ -34,3 +34,19 @@ div {
 .project_design-principles {
   background-image: url(https://code.s3.yandex.net/web-code/design.png);
 }
+
+.flex-column{
+  height: 557px;
+  width: 636px;
+}
+
+.project_procrastinate {
+  height: 557px;
+  width: 636px;
+}
+
+.project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
