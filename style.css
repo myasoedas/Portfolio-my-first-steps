@@ -22,8 +22,8 @@ div {
 }
 
 .project_beginner {
-  height: 430px;
   width: 636px;
+  height: 430px;
   margin: auto;
 }
 
@@ -36,13 +36,13 @@ div {
 }
 
 .flex-column{
-  height: 557px;
   width: 636px;
+  height: 557px;
 }
 
 .project_procrastinate {
-  height: 557px;
   width: 636px;
+  height: 557px;
 }
 
 .project-video {
@@ -52,11 +52,21 @@ div {
 }
 
 .project_p5 {
-  height: 240px;
   width: 636px;
+  height: 240px;
 }
 
 .flex-row_frameworks-inner {
-  height: 290px;
   width: 636px;
+  height: 290px;
+}
+
+.project_slider {
+  width: 306px;
+  height: 290px;
+}
+
+.project_reactive {
+  width: 306px;
+  height: 290px;
 }
