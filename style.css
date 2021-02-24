@@ -14,7 +14,8 @@ div {
 .menu {
   display: flex;
   justify-content: center;
-  height: 75px;
+  min-height: 75px;
+  align-items: center;
 }
 
 .flex-row {
