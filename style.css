@@ -64,9 +64,11 @@ div {
 .project_slider {
   width: 306px;
   height: 290px;
+  background-image: url(https://code.s3.yandex.net/web-code/slider.gif);
 }
 
 .project_reactive {
   width: 306px;
   height: 290px;
+  background-image: url(https://code.s3.yandex.net/web-code/reactive.gif);
 }
