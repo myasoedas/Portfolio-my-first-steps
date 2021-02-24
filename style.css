@@ -36,8 +36,13 @@ div {
 }
 
 .flex-column{
+  display: flex;
   width: 636px;
   height: 557px;
+}
+
+.flex-column_reversed {
+  flex-direction:column-reverse;
 }
 
 .project_procrastinate {
