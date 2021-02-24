@@ -50,3 +50,13 @@ div {
   height: 100%;
   object-fit: cover;
 }
+
+.project_p5 {
+  height: 240px;
+  width: 636px;
+}
+
+.flex-row_frameworks-inner {
+  height: 290px;
+  width: 636px;
+}
