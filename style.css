@@ -16,11 +16,13 @@ div {
   justify-content: center;
   min-height: 75px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-row {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .project {
