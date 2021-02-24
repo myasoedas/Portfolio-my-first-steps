@@ -48,6 +48,18 @@ div {
   height: 290px;
 }
 
+.project_how-to-study {
+  background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png);
+}
+
+.project_across-russia {
+  background-image: url(https://code.s3.yandex.net/web-code/across-russia.png);
+}
+
+.project_mesto {
+  background-image: url(https://code.s3.yandex.net/web-code/mesto.png);
+}
+
 .flex-row_reversed{
   flex-direction: row-reverse;
 }
