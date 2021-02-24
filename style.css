@@ -35,6 +35,10 @@ div {
   background-image: url(https://code.s3.yandex.net/web-code/design.png);
 }
 
+.flex-row_reversed{
+  flex-direction: row-reverse;
+}
+
 .flex-column{
   display: flex;
   width: 636px;
