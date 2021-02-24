@@ -11,6 +11,11 @@ div {
   margin: auto;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
 .flex-row {
   display: flex;
   justify-content: space-around;
