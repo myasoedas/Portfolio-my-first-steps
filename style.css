@@ -43,6 +43,11 @@ div {
   background-image: url(https://code.s3.yandex.net/web-code/design.png);
 }
 
+.project_vanilla {
+  width: 306px;
+  height: 290px;
+}
+
 .flex-row_reversed{
   flex-direction: row-reverse;
 }
