@@ -16,7 +16,11 @@ body {
 }
 
 .header-link {
-  margin: auto;
+  font-size: 28px; /*задал размер шрифта 28px для ссылок блока header*/
+  text-decoration: none; /*убрал нижнее подчеркивание для ссылок блока header*/
+  color: #10191E; /*задал цвет ссылок для блока header*/
+  margin: auto; /*выровнял ссылки по центру для блока header*/
+
 }
 
 .menu {
@@ -28,6 +32,13 @@ body {
   max-width: 1330px;
   min-width: 1280px;
   margin: auto;
+}
+
+.menu-link {
+  font-size: 18px; /*задал размер шрифта ссылок 28px для блока menu*/
+  text-decoration: none; /*убрал нижнее подчеркивание для ссылок блока menu*/
+  color: #10191E; /*задал цвет ссылок для блока menu*/
+  margin-right: 20px; /*задал внешний правый отступ 20px для ссылок меню*/
 }
 
 .main {
