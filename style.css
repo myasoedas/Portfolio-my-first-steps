@@ -128,4 +128,5 @@ div {
   background-size: contain; /*размер фона contain*/
   background-repeat: no-repeat; /*повтор фона no-repeat*/
   background-position: center; /*позицию фона center*/
+  align-self: center; /*выровняем только логотип по центру и по вертикали*/
 }
