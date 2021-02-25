@@ -31,7 +31,8 @@ body {
   flex-wrap: wrap;
   max-width: 1330px;
   min-width: 1280px;
-  margin: auto;
+  margin
+  margin: 40px auto; /*добавил внешние отступы 40px сверху и снизу*/
 }
 
 .menu-link {
@@ -55,6 +56,7 @@ body {
 
 .flex-row_reversed{
   flex-direction: row-reverse;
+  margin: 60px auto; /*добавил внешние отступы 60px сверху и снизу*/
 }
 
 .flex-column{
