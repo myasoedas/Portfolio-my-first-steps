@@ -120,3 +120,12 @@ div {
   height: 95px; /*задайте этому блоку высоту 95 пикселей;*/
   justify-content: center; /*вложенные в него элементы отцентруйте вдоль оси флексбокс-контейнера.*/
 }
+
+.logo {
+  width: 145px; /*ширину 145 пикселей*/
+  height: 25px; /*высоту 25 пикселей*/
+  background-image: url(https://pictures.s3.yandex.net/logo_black.png); /*фоновое изображение по адресу https://pictures.s3.yandex.net/logo_black.png*/
+  background-size: contain; /*размер фона contain*/
+  background-repeat: no-repeat; /*повтор фона no-repeat*/
+  background-position: center; /*позицию фона center*/
+}
