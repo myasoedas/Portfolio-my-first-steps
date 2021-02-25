@@ -33,7 +33,7 @@ div {
 
 .flex-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /*Чтобы устранить белые щели между обложками и рамкой прижмите элементы флекс-строки к краям родителя*/
   flex-wrap: wrap;
 }
 
