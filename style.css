@@ -25,6 +25,26 @@ div {
   flex-wrap: wrap;
 }
 
+.flex-row_reversed{
+  flex-direction: row-reverse;
+}
+
+.flex-column{
+  display: flex;
+  width: 636px;
+  height: 557px;
+  justify-content:space-between;
+}
+
+.flex-column_reversed {
+  flex-direction:column-reverse;
+}
+
+.flex-row_frameworks-inner {
+  width: 636px;
+  height: 290px;
+}
+
 .project {
   display: flex;
   background-position: center;
@@ -50,31 +70,21 @@ div {
   height: 290px;
 }
 
+/*Элемент, которому задано CSS-свойство order: 1; будет показан раньше элемента со свойством order: 2;*/
+/*Элемент с отрицательным значением порядка (order: -1;) будет всегда первым в контейнере*/
 .project_how-to-study {
   background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png);
+  order: 3;
 }
 
 .project_across-russia {
   background-image: url(https://code.s3.yandex.net/web-code/across-russia.png);
+  order: 2;
 }
 
 .project_mesto {
   background-image: url(https://code.s3.yandex.net/web-code/mesto.png);
-}
-
-.flex-row_reversed{
-  flex-direction: row-reverse;
-}
-
-.flex-column{
-  display: flex;
-  width: 636px;
-  height: 557px;
-  justify-content:space-between;
-}
-
-.flex-column_reversed {
-  flex-direction:column-reverse;
+  order: 1;
 }
 
 .project_procrastinate {
@@ -91,11 +101,6 @@ div {
 .project_p5 {
   width: 636px;
   height: 240px;
-}
-
-.flex-row_frameworks-inner {
-  width: 636px;
-  height: 290px;
 }
 
 .project_slider {
