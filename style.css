@@ -5,6 +5,9 @@ div {
 .header {
   display: flex;
   height: 95px;
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
 }
 
 .header-link {
@@ -17,6 +20,15 @@ div {
   min-height: 75px;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
+}
+
+.main {
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
 }
 
 .flex-row {
@@ -120,6 +132,9 @@ div {
   display: flex; /*сделайте блок с классом footer флекс-контейнером;*/
   height: 95px; /*задайте этому блоку высоту 95 пикселей;*/
   justify-content: center; /*вложенные в него элементы отцентруйте вдоль оси флексбокс-контейнера.*/
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
 }
 
 .logo {
