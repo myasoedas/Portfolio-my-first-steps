@@ -78,6 +78,7 @@ div {
 }
 
 .project_across-russia {
+  flex-basis: 636px; /*базовая ширина flex элемента = 636px*/
   background-image: url(https://code.s3.yandex.net/web-code/across-russia.png);
   order: 2;
 }
