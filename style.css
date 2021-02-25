@@ -114,3 +114,9 @@ div {
   height: 290px;
   background-image: url(https://code.s3.yandex.net/web-code/reactive.gif);
 }
+
+.footer {
+  display: flex; /*сделайте блок с классом footer флекс-контейнером;*/
+  height: 95px; /*задайте этому блоку высоту 95 пикселей;*/
+  justify-content: center; /*вложенные в него элементы отцентруйте вдоль оси флексбокс-контейнера.*/
+}
