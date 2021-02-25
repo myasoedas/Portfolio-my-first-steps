@@ -3,6 +3,10 @@
 }
 */
 
+body {
+  font-family: 'Cormorant Garamond'; /*Сделаем шрифт помоднее*/
+}
+
 .header {
   display: flex;
   height: 95px;
