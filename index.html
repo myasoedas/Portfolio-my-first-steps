@@ -1,58 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru"> <!-- Сообщаем браузеру что этот html документ на русском языке -->
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
-  <link rel="icon" href="fav.ico">
-  <link rel="stylesheet" href="style.css">
+<head> <!-- Внутри тега head находится описательная информация сайта, которая не отображается в браузере, а также подключаются стили css и скрипты js -->
+
+  <meta charset="UTF-8"> <!-- Указал браузеру, что необходимо использовать кодировку UTF-8 -->
+  <meta name = "viewport" content = "width=device-width, initial-scale=1"> <!-- Чтобы страница занимала всю ширину экрана и отображалась на любом устройстве в масштабе 1:1-->
+
+  <meta name ="description" content = "портфолио Мясоед Александра на Яндекс.Практикуме"> <!-- Добавил описание сайта для поискового робота -->
+  <meta name = "keywords" content = "html, css, javascript"> <!-- Добавил ключевые слова (html, css, javascript) для поискового робота -->
+  <meta name = "author" content = "Мясоед Александр"> <!-- Добавил автора html страницы-->
+  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css"> <!-- Подключил таблицу стилей для обнуления css параметров тегов, которые браузер определяет сам по умолчанию -->
+
+  <link rel="stylesheet" href="style.css"> <!-- Подключил свою таблицу стилей css -->
   <title>Портфолио</title>
 </head>
-<body>
-  <div class = "header">
-    <a href = "#" class = "header-link">Яндекс Практикум</a>
-  </div>
-  <div class = "menu">
-    <a href = "#" class = "menu-link">Первые шаги в HTML и CSS</a>
-    <a href = "#" class = "menu-link">Библиотеки JavaScript</a>
-    <a href = "#" class = "menu-link">Практика HTML, CSS и JavaScript</a>
-  </div>
-  <div class = "main">
-    <div class = "flex-row">
-      <div class = "project project_beginner project_music-album">
-      </div>
-      <div class = "project project_beginner project_design-principles">
-      </div>
-    </div>
-    <div class = "flex-row flex-row_reversed">
-      <div class = "flex-column flex-column_reversed">
-        <div class = "project project_frameworks project_p5">
-          <video class="project-video" src="https://code.s3.yandex.net/web-code/like.mp4" autoplay muted loop></video>
-        </div>
-        <div class = "flex-row flex-row_frameworks-inner">
-          <div class = "project project_frameworks project_slider">
-          </div>
-          <div class = "project project_frameworks project_reactive">
-          </div>
-        </div>
-      </div>
-      <div class = "project project_frameworks project_procrastinate">
-        <video class="project-video" src="https://code.s3.yandex.net/web-code/procrastinate.mov" autoplay muted loop></video>
-      </div>
-    </div>
-    <div class = "flex-row">
-      <div class = "project project_vanilla project_how-to-study">
-      </div>
-      <div class = "project project_vanilla project_across-russia">
-      </div>
-      <div class = "project project_vanilla project_mesto">
-      </div>
-    </div>
-  </div>
 
-  <!-- Подвал -->
-  <div class = "footer">
-    <div class = "logo">
+<body class = "page">  <!-- БЭМ резко против использования селектора тегов - создал класс page для управления body -->
+
+  <!-- Блок - заголовок страницы -->
+  <header class="header centered-block"> <!-- Заменил тег div на более подходящий и правильный тег header-->
+    <h1 class = "centered-block"><a lang = "en" href="#" class="header__link">Myasoed Aleksandr</a></h1> <!-- 2 2/2 добавил к тегу "a" атрибут lang = "en" -->
+  </header>
+
+  <!-- Блок навигации по странице -->
+  <nav class="menu centered-block page__menu"> <!-- Заменил тег div на более подходящий и правильный тег menu -->
+    <a href="#beginner" class="menu__link menu__link_active">Первые шаги в HTML и CSS</a> <!-- Добавил модификатор по БЭМ: menu__link_active-->
+    <a href="#frameworks" class="menu__link">Библиотеки JavaScript</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+    <a href="#practice" class="menu__link">Практика HTML, CSS и JavaScript</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+  </nav>
+
+  <!-- Главный блок с основным контентом страницы-->
+  <main class="content centered-block"> <!-- Заменил тег div на более подходящий и правильный тег menu. Переименовал класс main в content, так будет понятнее за что отвечает класс-->
+
+    <!-- Верхний ряд карточек -->
+  <section id="beginner">
+    <h2 class = "content__title">Первые шаги в HTML и CSS</h2>
+    <ul class="flex-row list flex-row_space_bottom"> <!-- Заменил тег div на более подходящий и правильный тег section -->
+      <li class="project project_name_music-album project_width_l project_height_l">
+        <a href="#" class="project__overlay">обложка музыкального альбома</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+      </li>
+      <li class="project project_name_design-principles project_width_l project_height_l">
+        <a href="#" class="project__overlay">посадочная страница</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+      </li>
+    </ul>
+  </section>
+
+    <!-- Средний ряд карточек -->
+    <!-- Вложенный список ul: Новый ul вложен в li, и только так правильно -->
+    <section id="frameworks"> <!-- 1 Заменил тег div на более подходящий и правильный тег section. 2 Заменил тег section на более подходящий тег ul -->
+      <h2 class = "content__title">Библиотеки JavaScript</h2>
+    <div class="flex-row flex-row_reversed flex-row_space_bottom"> <!-- Добавил дополнительный блок div, чтобы добавить заголовок в section-->
+      <div class="flex-column flex-column_reversed"> <!-- Заменил теги div на более подходящий тег li -->
+        <div class="project project_width_l project_height_s"> <!-- Заменил теги div на более подходящий тег ul, так как это вложенный спсок. -->
+          <video class="project__video" src="https://code.s3.yandex.net/web-code/like.mp4" autoplay muted loop></video>
+        </div>
+        <ul class="flex-row list project_width_l project_height_m"> <!-- Заменил теги div на более подходящий тег ul, так как это вложенный спсок. -->
+          <li class="project project_name_slider project_width_m project_height_m">
+            <a href="#" class="project__overlay">слайдер</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+          </li> <!-- Заменил теги div на более подходящий тег li -->
+          <li class="project project_name_reactive project_width_m project_height_m">
+            <a href="#" class="project__overlay">React, Vue, Angular</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+          </li>
+        </ul>
+      </div>
+      <div class="project project_width_l project_height_xl"> <!-- Заменил тег div на более подходящий тег li. -->
+        <video class="project__video" src="https://code.s3.yandex.net/web-code/procrastinate.mov" autoplay muted loop></video>
+      </div>
     </div>
-  </div>
+    </section>
+
+    <!-- Нижний ряд карточек -->
+  <section id="practice">
+    <h2 class = "content__title">Практика HTML, CSS и JavaScript</h2>
+    <ul class="flex-row list"> <!-- 1 Заменил тег div на более подходящий и правильный тег section --> <!-- 2 Заменил тег section на более подходящий тег ul -->
+      <li class="project project_name_how-to-study project_width_m project_height_m">
+        <a href="#" class="project__overlay">CSS-анимации</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+      </li> <!-- Заменил теги div на более подходящий тег li -->
+      <li class="project project_name_across-russia project_width_l project_height_m">
+        <a href="#" class="project__overlay">адаптивная вёрстка</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+      </li>
+      <li class="project project_name_mesto project_width_m project_height_m">
+        <a href="#" class="project__overlay">приложение на JavaScript</a> <!-- Текст ссылки отображается при наведении курсора мышки-->
+      </li>
+    </ul>
+  </section>
+  </main>
+  <footer class="footer centered-block"> <!-- Заменил тег div на более подходящий и правильный тег footer -->
+    <div class="footer__logo"></div> <!-- Заменил класс logo на footer__logo, чтобы было по БЭМ-->
+  </footer>
 </body>
 </html>

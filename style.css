@@ -1,26 +1,34 @@
-/*div {
-  border: 1px solid red;
-}
-*/
-
-body {
-  font-family: 'Cormorant Garamond'; /*Сделаем шрифт помоднее*/
+.page { /*Заменил селектор тега body на класс page, чтобы было по БЭМ*/
+  font-family: 'Cormorant Garamond';
 }
 
 .header {
-  display: flex;
   height: 95px;
+  display: flex;
   max-width: 1330px;
   min-width: 1280px;
-  margin: auto;
 }
 
-.header-link {
-  font-size: 28px; /*задал размер шрифта 28px для ссылок блока header*/
-  text-decoration: none; /*убрал нижнее подчеркивание для ссылок блока header*/
-  color: #10191E; /*задал цвет ссылок для блока header*/
-  margin: auto; /*выровнял ссылки по центру для блока header*/
+.header__link { /*Переименовал класс header-link в класс header__link, чтобы было по БЭМ*/
+  font-size: 28px;
+  text-decoration: none;
+  color: #10191E;
+}
 
+.header__link[lang="ru"]::before { /*При изменении параметра lang будет отображаться приветствие в соответствие с указанным в нем языком*/
+  content: "Привет, меня зовут "
+}
+
+.header__link[lang="en"]::before {
+  content: "Hello, my name is "
+}
+
+.header__link[lang="fr"]::before {
+  content: "Bonjour, je suis "
+}
+
+.header__link::after {
+    content: "!";
 }
 
 .menu {
@@ -31,136 +39,180 @@ body {
   flex-wrap: wrap;
   max-width: 1330px;
   min-width: 1280px;
-  margin
-  margin: 40px auto; /*добавил внешние отступы 40px сверху и снизу*/
 }
 
-.menu-link {
-  font-size: 18px; /*задал размер шрифта ссылок 28px для блока menu*/
-  text-decoration: none; /*убрал нижнее подчеркивание для ссылок блока menu*/
-  color: #10191E; /*задал цвет ссылок для блока menu*/
-  margin-right: 20px; /*задал внешний правый отступ 20px для ссылок меню*/
+.page__menu { /*Добавил микс page__menu, чтобы убрать из класса menu параметр влияющий на внешние отступы */
+    margin: 40px auto;
 }
 
-.main {
+.menu__link { /*Переименовал класс menu-link в класс menu__link, чтобы было по БЭМ*/
+  font-size: 18px;
+  text-decoration: none;
+  color: #10191E;
+  margin-right: 20px;
+}
+
+.menu__link_active { /*Добавил модификатор по БЭМ для ссылки блока меню*/
+  text-decoration: underline;
+}
+
+.menu__link:last-of-type {
+  margin-right: 0;
+}
+
+
+.content { /*переименовал класс main в content, чтобы было понятно за что отвечает класс*/
   max-width: 1330px;
   min-width: 1280px;
-  margin: auto;
 }
 
-.flex-row {
-  display: flex;
-  justify-content: space-between; /*Чтобы устранить белые щели между обложками и рамкой прижмите элементы флекс-строки к краям родителя*/
-  flex-wrap: wrap;
+.content__title {
+  font-size: 34px;
+  margin: 0 0 40px;
+  text-align: center;
 }
 
-.flex-row_reversed{
-  flex-direction: row-reverse;
-  margin: 60px auto; /*добавил внешние отступы 60px сверху и снизу*/
-}
-
-.flex-column{
-  display: flex;
-  width: 636px;
-  height: 557px;
-  justify-content:space-between;
-}
-
-.flex-column_reversed {
-  flex-direction:column-reverse;
-}
-
-.flex-row_frameworks-inner {
-  width: 636px;
-  height: 290px;
+.list {
+  /*Перенес стили для списка из класса flex-row в класс list, чтобы было по БЭМ*/
+  list-style: none; /*Убрал маркеры списка ul*/
+  padding: 0; /*Обнулил внутренние отступы*/
+  margin: 0; /*Обнулил внешние отступы*/
 }
 
 .project {
-  display: flex;
   background-position: center;
   background-size: cover;
 }
 
-.project_beginner {
+/*Группа модификаторов по БЭМ для управления шириной блоков карточек*/
+.project_width_l {
   width: 636px;
-  height: 430px;
-  margin: auto;
 }
 
-.project_music-album {
-  background-image: url(https://code.s3.yandex.net/web-code/album.png);
-}
-
-.project_design-principles {
-  background-image: url(https://code.s3.yandex.net/web-code/design.png);
-}
-
-.project_vanilla {
+.project_width_m {
   width: 306px;
-  height: 290px;
+}
+/*_____________________*/
+
+/*Группа модификаторов по БЭМ для управления высотой блоков карточек*/
+.project_height_xl {
+    height: 557px;
 }
 
-/*Элемент, которому задано CSS-свойство order: 1; будет показан раньше элемента со свойством order: 2;*/
-/*Элемент с отрицательным значением порядка (order: -1;) будет всегда первым в контейнере*/
-.project_how-to-study {
-  background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png);
-  order: 3;
+.project_height_l {
+    height: 430px;
 }
 
-.project_across-russia {
-  flex-basis: 636px; /*базовая ширина flex элемента = 636px*/
-  background-image: url(https://code.s3.yandex.net/web-code/across-russia.png);
-  order: 2;
+.project_height_m {
+    height: 290px;
 }
 
-.project_mesto {
-  background-image: url(https://code.s3.yandex.net/web-code/mesto.png);
-  order: 1;
+.project_height_s {
+    height: 240px;
 }
+/*_________________*/
 
-.project_procrastinate {
-  width: 636px;
-  height: 557px;
-}
-
-.project-video {
+.project__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.project_p5 {
-  width: 636px;
-  height: 240px;
+.project__overlay {
+  background-color: rgba(0, 0, 100, .8);
+  height: 100%;
+  width: 100%; /* растянули ссылку во весь блок */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* выровняли текст по центру средствами flex */
+  text-decoration: none; /* убрали подчеркивание  */
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box; /* задали внутренний фокус элемента, чтобы контейнер не расширялся */
+  padding: 20px; /* отступ, чтобы текст не касался краёв */
+  opacity: 0; /*До наведения курсора мышки прозрачность 0*/
 }
 
-.project_slider {
-  width: 306px;
-  height: 290px;
+.project__overlay:hover {
+  opacity: 1; /*При наведении мышки прозрачность 1*/
+
+}
+
+.project_name_music-album {
+  background-image: url(https://code.s3.yandex.net/web-code/album.png);
+}
+
+.project_name_design-principles {
+  background-image: url(https://code.s3.yandex.net/web-code/design.png);
+}
+
+.project_name_slider {
   background-image: url(https://code.s3.yandex.net/web-code/slider.gif);
 }
 
-.project_reactive {
-  width: 306px;
-  height: 290px;
+.project_name_reactive {
   background-image: url(https://code.s3.yandex.net/web-code/reactive.gif);
 }
 
-.footer {
-  display: flex; /*сделайте блок с классом footer флекс-контейнером;*/
-  height: 95px; /*задайте этому блоку высоту 95 пикселей;*/
-  justify-content: center; /*вложенные в него элементы отцентруйте вдоль оси флексбокс-контейнера.*/
-  max-width: 1330px;
-  min-width: 1280px;
-  margin: auto;
+.project_name_how-to-study {
+  background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png);
+  order: 3;
 }
 
-.logo {
-  width: 145px; /*ширину 145 пикселей*/
-  height: 25px; /*высоту 25 пикселей*/
-  background-image: url(https://pictures.s3.yandex.net/logo_black.png); /*фоновое изображение по адресу https://pictures.s3.yandex.net/logo_black.png*/
-  background-size: contain; /*размер фона contain*/
-  background-repeat: no-repeat; /*повтор фона no-repeat*/
-  background-position: center; /*позицию фона center*/
-  align-self: center; /*выровняем только логотип по центру и по вертикали*/
+.project_name_across-russia {
+  background-image: url(https://code.s3.yandex.net/web-code/across-russia.png);
+  order: 2;
+}
+
+.project_name_mesto {
+  background-image: url(https://code.s3.yandex.net/web-code/mesto.png);
+  order: 1;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-row_reversed {
+  flex-direction: row-reverse;
+}
+
+/*Добавил микс модификатор по БЭМ flex-row_space_bottom, чтобы убрать из класса flex-row_reversed внешний отступ - т.к. это не по БЭМ*/
+.flex-row_space_bottom {
+  margin: 60px 0;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column_reversed {
+  flex-direction: column-reverse;
+}
+
+.footer {
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  max-width: 1330px;
+  min-width: 1280px;
+}
+
+.footer__logo {
+  width: 145px;
+  height: 25px;
+  background-image: url(https://pictures.s3.yandex.net/logo_black.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+}
+
+.centered-block { /*Микс модификатор по БЭМ для выравниванеия по центру. Теперь в других классах можно убрать margin: auto*/
+    margin: auto;
 }
